@@ -16,8 +16,6 @@ app.use(express.static('public'));
 // console.log(database);
 
 
-
-
 app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, './public/notes.html')));
 
 app.get('/api/notes', (req, res) => res.json(database));
@@ -43,7 +41,8 @@ app.post('/api/notes', (req,res) => {
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')));
 
 // app.delete('/api/notes/:id', (req, res) => {
-//     const notesId = Number(req.params.id);
+//     const notesId = (req.params.id);
+
 
 
 // })
